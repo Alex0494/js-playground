@@ -6,7 +6,7 @@ const path = require('path');
 
 module.exports = {
   devtool: debug ? 'inline-sourcemap' : null,
-  entry: path.join(__dirname, 'src', 'decorators.js'),
+  entry: path.join(__dirname, 'src', 'react-rx.js'),
   devServer: {
     inline: true,
     port: 3000,

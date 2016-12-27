@@ -7,7 +7,7 @@ import axios from 'axios'
 //CREATE OBSERVABLE FROM PROMISE
 function data$(input) {
     return Observable.fromPromise(
-      axios.get(`https://www.reddit.com/r/aww/search.json?q=${input}&restrict_sr=off`)
+      axios.get(`https://www.reddit.com/r/aww/search.json?q=${input}&restrict_sr=on`)
       .then(res => res)
     ).map(res => res.data.data.children)
 }
