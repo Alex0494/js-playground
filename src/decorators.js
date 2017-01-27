@@ -1,3 +1,11 @@
+/*
+Decorators are Higher Order Functions.
+HOF ARE FUNCTIONS THAT TAKE IN A FUNCTION AND RETURN ANOTHER FUNCTION
+This operation can result in an enhancement of the behaviour of a particular function, passed as the argument.
+
+common function decorators: fluent, memoize, debounce, once
+*/
+
 //fluent
 function fluent(fn) {
 	return function (...args) {
@@ -33,7 +41,7 @@ pES5.setName('Jane', 'Doe').sayName().setName('John', 'Doe').sayName()
 //in this particular instance we are wrapping the descriptor.value(the original function) with another function
 //that is actually our fluent interface.
 //in fact we hold reference to it with the fn variable, so that it can be called inside fluent
-//then we call it via apply, because we want the THIS
+//then we call it via apply, because we want the grab the THIS
 function decorate(target, name, descriptor) {
   console.log("target: ", target)
   console.log("name: ", name)
